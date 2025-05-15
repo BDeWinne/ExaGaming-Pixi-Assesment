@@ -9,7 +9,6 @@ const SYMBOL_COLORS = {
 export class SymbolView {
     constructor(label) {
         this.label = '';
-        // @ts-ignore
         this.container = new PIXI.Container();
         this.setLabel(label);
     }
@@ -19,18 +18,21 @@ export class SymbolView {
             return;
         this.label = label;
         this.container.removeChildren();
-        // @ts-ignore
         const graphics = new PIXI.Graphics();
         const color = (_a = SYMBOL_COLORS[label]) !== null && _a !== void 0 ? _a : 0xffffff;
         graphics.beginFill(color);
         graphics.drawRoundedRect(0, 0, 200, 90, 10);
         graphics.endFill();
         this.container.addChild(graphics);
-        // @ts-ignore
         const text = new PIXI.Text(label, { fontSize: 40, fill: 0x000000 });
         text.anchor.set(0.5);
         text.x = 100;
         text.y = 45;
         this.container.addChild(text);
+        this.text = text; // <-- Guarda referencia al texto
+    }
+    destroy() {
+        this.container.removeChildren();
+        this.container.destroy();
     }
 }

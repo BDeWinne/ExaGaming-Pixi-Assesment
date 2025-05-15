@@ -28,4 +28,7 @@ export class SoundManager {
     static playWin() {
         PIXI.sound.play('win');
     }
+    static stopWin() {
+        PIXI.sound.stop('win');
+    }
 }

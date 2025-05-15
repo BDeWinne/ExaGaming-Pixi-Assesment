@@ -1,7 +1,13 @@
 /// <reference types="pixi.js" />
 
 declare namespace PIXI {
-    var sound: any;
+    interface SoundAPI {
+        play(key: string, options?: any): void;
+        stop(key: string): void;
+        add(key: string, options: any): void;
+        exists(key: string): boolean;
+    }
+    var sound: SoundAPI;
 }
 
 export class SoundManager {
@@ -34,4 +40,7 @@ export class SoundManager {
     static playWin() {
         PIXI.sound.play('win');
     }
+    static stopWin() {
+    PIXI.sound.stop('win');
+}
 }
