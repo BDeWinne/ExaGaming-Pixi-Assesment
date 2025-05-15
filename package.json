@@ -1,0 +1,18 @@
+{
+  "name": "slot-machine",
+  "version": "1.0.0",
+  "description": "Simple slot machine built with PIXI.js",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "@types/pixi.js": "^5.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/css-font-loading-module": "^0.0.14",
+    "eventemitter3": "^5.0.1",
+    "pixi.js": "^6.5.8"
+  }
+}

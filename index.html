@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slot Machine</title>
+    <style>
+      body {
+        margin: 0;
+        background: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      canvas {
+        border: 2px solid #fff;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="spinButton">Spin</button>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.8/dist/browser/pixi.min.js"></script>
+    <script src="/libs/pixi-sound.js"></script>
+    <script type="module" src="./dist/App.js"></script>
+  </body>
+</html>
